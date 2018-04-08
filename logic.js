@@ -1,5 +1,6 @@
 var xmlDoc;
 var numPreguntas = 0;
+var correccion = "";
 
 window.onload = function () {
     leerXML();
@@ -47,14 +48,19 @@ function imprimirPreguntas() {
     }
 }
 
+function imprimirCorrección(){
+
+}
+
 
 function crearRadio(i) {
 
     var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('opcio').length;
     var element = document.getElementById("mainform");
 
-   
+    element.innerHTML = element.innerHTML + "<br/>";
     var enunciado = document.createElement("label");
+    enunciado.setAttribute('class', "enunciado");
     enunciado.setAttribute('for', i);
     enunciado.innerHTML = i+"."+xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('text')[0].innerHTML + "<br>";
     element.appendChild(enunciado);
@@ -64,7 +70,7 @@ function crearRadio(i) {
 
         var question = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('opcio')[k].innerHTML;
         var radioBut = document.createElement("input");
-
+        
         radioBut.setAttribute("type", "radio");
         radioBut.setAttribute("name", i);
         radioBut.setAttribute("value", k);
@@ -80,9 +86,10 @@ function crearRadio(i) {
 function crearCheck(i) {
     var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('opcio').length;
     var element = document.getElementById("mainform");
-
+    element.innerHTML = element.innerHTML + "<br/>";
     var enunciado = document.createElement("label");
     enunciado.setAttribute('for', i);
+    enunciado.setAttribute('class', "enunciado");
     enunciado.innerHTML = i+"."+xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('text')[0].innerHTML + "<br>";
     element.appendChild(enunciado);
 
@@ -108,8 +115,9 @@ function crearText(i) {
     var numSol = xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('opcio').length;
     var element = document.getElementById("mainform");
 
-   
+    element.innerHTML = element.innerHTML + "<br/>";
     var enunciado = document.createElement("label");
+    enunciado.setAttribute('class', "enunciado");
     enunciado.setAttribute('name', i);
     enunciado.innerHTML = i+"."+xmlDoc.getElementsByTagName('pregunta')[i].getElementsByTagName('text')[0].innerHTML + "<br>";
     element.appendChild(enunciado);
@@ -129,14 +137,19 @@ function crearText(i) {
 
 function imprimirBoton(){
     var element = document.getElementById("mainform");
+    element.innerHTML = element.innerHTML + "<br/>";
     var textinp = document.createElement('button');
         textinp.setAttribute('type', "button");
         textinp.setAttribute('onclick', "checkPreguntas()");
         textinp.innerHTML= "Comprueba tus respuestas!";
         element.appendChild(textinp);
+        var corr = document.createElement('div');
+        corr.setAttribute('id', "corr");
+        element.appendChild(corr);
 }
 
 function checkPreguntas() {
+    document.getElementById("corr").innerHTML = "<h3>Corrección:</h3><br/>";
     try{
     var numPreg = xmlDoc.getElementsByTagName('pregunta').length;
 
@@ -165,10 +178,10 @@ function checkRadio(x) {
     var opcions = document.getElementsByName(x);
 
     if (opcions[correcta].checked) {
-        console.log(x+"correcto");
+        document.getElementById("corr").innerHTML = document.getElementById("corr").innerHTML + ("<spam style='color: green;'>"+x+" Correcto"+"<br/></spam>");
     }
     else {
-        console.log(x+"nope");
+        document.getElementById("corr").innerHTML = document.getElementById("corr").innerHTML + ("<spam style='color: red;'>"+x+" Incorrecto"+"<br/></spam>");
     }
 }
 function checkCheckbox(x) {
@@ -189,10 +202,10 @@ function checkCheckbox(x) {
         } 
     }
     if (correcta) {
-        console.log(x+"correcto");
+        document.getElementById("corr").innerHTML = document.getElementById("corr").innerHTML + ("<spam style='color: green;'>"+x+" Correcto"+"<br/></spam>");
     }
     else {
-        console.log(x+"nope");
+        document.getElementById("corr").innerHTML = document.getElementById("corr").innerHTML + ("<spam style='color: red;'>"+x+" Incorrecto"+"<br/></spam>");
     }
 }
 function checkText(x) {
@@ -202,9 +215,9 @@ function checkText(x) {
 
 
     if (resp === userAns) {
-        console.log(x+"correcto");
+        document.getElementById("corr").innerHTML = document.getElementById("corr").innerHTML + ("<spam style='color: green;'>"+x+" Correcto"+"<br/></spam>");
     }
     else {
-        console.log(x+"nope");
+        document.getElementById("corr").innerHTML = document.getElementById("corr").innerHTML + ("<spam style='color: red;'>"+x+" Incorrecto"+"<br/></spam>");
     }
 }
