@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<preguntes>
+ <pregunta id='lol0'>
+  <tipus>text</tipus>
+  <text>¿Cómo se llama la Hija de las Estrellas?</text>
+  <resposta>Soraka</resposta>
+ </pregunta>
+ <pregunta id='lol1'>
+  <tipus>text</tipus>
+  <text>¿Quién es el hermano de Lux?</text>
+  <resposta>Garen</resposta>
+ </pregunta>
+ <pregunta id='lol2'>
+  <tipus>select</tipus>
+  <text>¿En qué momento de la partida aparece el Barón Nashor?</text>
+  <opcio>Minuto 5</opcio>
+  <opcio>Minuto 10</opcio> 
+  <opcio>Minuto 20</opcio>
+  <opcio>Cuando se rompe el primer inhibidor</opcio>
+  <resposta>2</resposta> <!-- 0, 1, 2 -->
+ </pregunta>
+ <pregunta id='lol3'>
+  <tipus>select</tipus>
+  <text>¿Quién creó una red de citas?</text>
+  <opcio>Lulu</opcio>
+  <opcio>Braum</opcio> 
+  <opcio>Blitzcrank</opcio>
+  <resposta>2</resposta> <!-- 0, 1, 2 -->
+ </pregunta>
+<pregunta id='lol4'>
+  <tipus>select</tipus>
+  <text>¿Cómo se llama la hija de Kassadin?</text>
+  <opcio>Rek'sai</opcio>
+  <opcio>Kai'sa</opcio> 
+  <opcio>Vai'ma</opcio>
+  <resposta>1</resposta> <!-- 0, 1, 2 -->
+ </pregunta>
+ <pregunta id='lol5'>
+  <tipus>selectMulti</tipus>
+  <text>Selecciona todos los campeones de Noxus</text>
+  <opcio>Darius</opcio>
+  <opcio>Morgana</opcio> 
+  <opcio>LebLanc</opcio>
+  <opcio>Shivana</opcio>
+  <opcio>Zed</opcio> 
+  <opcio>Riven</opcio>
+  <resposta>0,2,5</resposta> <!-- 0, 1, 2 -->
+ </pregunta>
+ <pregunta id='lol6'>
+  <tipus>select</tipus>
+  <text>¿De dónde es Janna?</text>
+  <opcio>Jonia</opcio>
+  <opcio>Runaterra</opcio> 
+  <opcio>Zaun</opcio>
+  <resposta>2</resposta> <!-- 0, 1, 2 -->
+ </pregunta>
+ <pregunta id='lol7'>
+  <tipus>select</tipus>
+  <text>¿De qué colores era la ropa original de Karma?</text>
+  <opcio>Azul y naranja</opcio>
+  <opcio>Verde y rosa</opcio> 
+  <opcio>Blanco y negro</opcio>
+  <resposta>2</resposta> <!-- 0, 1, 2 -->
+ </pregunta>
+ <pregunta id='lol8'>
+  <tipus>select</tipus>
+  <text>¿Quién no es originario de Piltover?</text>
+  <opcio>Heimerdinger</opcio>
+  <opcio>Camille</opcio> 
+  <opcio>Caitlyn</opcio>
+  <resposta>0</resposta> <!-- 0, 1, 2 -->
+ </pregunta>
+ <pregunta id='lol9'>
+  <tipus>select</tipus>
+  <text>¿De quién es la frase "¡Es mío! ¡Lo he chupado yo!"?</text>
+  <opcio>Trundle</opcio>
+  <opcio>Kog'Maw</opcio> 
+  <opcio>Twitch</opcio>
+  <resposta>2</resposta> <!-- 0, 1, 2 -->
+ </pregunta>
+ <pregunta id='lol10'>
+  <tipus>selectMulti</tipus>
+  <text>Selecciona las Guardianas de las Estrellas (hasta 2017):</text>
+  <opcio>Lux</opcio>
+  <opcio>Irelia</opcio> 
+  <opcio>Ezreal</opcio>
+  <opcio>Nami</opcio>
+  <opcio>Soraka</opcio>
+  <opcio>Syndra</opcio> 
+  <opcio>Urgot</opcio>
+  <resposta>0,2,4,5</resposta> <!-- 0, 1, 2 -->
+ </pregunta>
+  <pregunta id='lol11'>
+  <tipus>select</tipus>
+  <text>¿Qué siginifica ADC?</text>
+  <opcio>Auto Damage Champion</opcio>
+  <opcio>Attack Damage Carry</opcio> 
+  <opcio>Attack Damage Champion</opcio>
+  <resposta>1</resposta> <!-- 0, 1, 2 -->
+ </pregunta>
+ <pregunta id='lol12'>
+  <tipus>select</tipus>
+  <text>¿A qué temen los demacianos?</text>
+  <opcio>A la tecnología hextech</opcio>
+  <opcio>A los dragones</opcio> 
+  <opcio>A la magia</opcio>
+  <resposta>2</resposta> <!-- 0, 1, 2 -->
+ </pregunta>
+ <pregunta id='lol13'>
+  <tipus>select</tipus>
+  <text>¿Qué Jarvan conocemos?</text>
+  <opcio>Jarvan IV</opcio>
+  <opcio>Jarvan V</opcio> 
+  <opcio>Jarvan VI</opcio>
+  <resposta>0</resposta> <!-- 0, 1, 2 -->
+ </pregunta>
+ <pregunta id='lol14'>
+  <tipus>select</tipus>
+  <text>¿Cuánto daño inflige un ataque de 100 de daño verdadero a un campeón con 50 de armadura y 50 de resistencia mágica?</text>
+  <opcio>0</opcio>
+  <opcio>50</opcio> 
+  <opcio>100</opcio>
+  <resposta>2</resposta> <!-- 0, 1, 2 -->
+ </pregunta>
+</preguntes>
