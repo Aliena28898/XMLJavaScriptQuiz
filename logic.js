@@ -167,8 +167,8 @@ function checkPreguntas() {
             checkText(i);
         }
     }
-    }
-    catch{
+}
+    catch (exception) {
         alert("Debes rellenar todas las preguntas");
     }
 }
